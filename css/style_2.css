@@ -208,7 +208,7 @@ body {
 ::-moz-focus-inner {border:0;}
 
 .slide {
-	background-position: center center;
+	background-position: top left;
 	background-repeat: no-repeat;
 	padding-bottom: 65px;
 	padding-top: 50px;
@@ -234,7 +234,7 @@ body {
 
 @media (max-width: 991px) {
 	#slide-1 {
-		background-position: -70% 0, 170% 0;
+		background-position: -0% 0, 170% 0;
 	}
 }
 
