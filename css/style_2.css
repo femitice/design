@@ -217,21 +217,16 @@ body {
 
 #slide-1 {
     
+    
 	background-image: url('../images/Typing-numbers_2.jpg');
-	color: #ffffff;
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
-
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    color: #ffffff;
+    background-repeat: no-repeat;
+    background-position: top left;
     background-size: cover;
-    width: 100%;
-	background-attachment: relative;
-	background-position: center center;
+    
+    
 }
+
 
 #slide-1 h1 {
 	padding-top: 130px;
@@ -245,7 +240,7 @@ body {
 
 @media (max-width: 767px) {
 	#slide-1 {
-		background-image: none;
+		background-image: "note";
 	}
 }
 
