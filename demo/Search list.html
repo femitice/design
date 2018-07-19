@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Search list</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  
+      <style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+      @keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70% {
+    transform: translateX(-5px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(5px);
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #f8f9fa;
+  font-family: sans-serif;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 300px;
+  height: 300px;
+  background: #f2f3f6;
+  padding: 1em;
+  border: 1px  #d4d7e1;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 5px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+  overflow: hidden;
+  inline-size: 20px;
+  
+}
+
+.test {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 500px;
+  height: 260px;
+  background: #ffffff;
+  padding: 1em;
+  border: 1px solid #d4d7e1;
+
+  
+}
+
+.input-query {
+  width: 100%;
+  padding: 0.5m;
+  border: 1px solid #d4d7e1;
+  border-radius: 3px;
+  font-size: 1em;
+}
+.input-query:focus ~ .counter {
+  opacity: 0.1;
+  transition: opacity 1s ease-in;
+}
+
+.list-wrap {
+  margin-top: -200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.list {
+  max-height: 200px;
+}
+
+
+.list-item {
+  font-size: 0.9em;
+  text-align: left;
+  padding: 0.5em 0.8em;
+  border-bottom: 1px solid #d4d7e1;
+  border-top: 1px solid white;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap:normal;
+  max-width: 50%;
+  position:relative;
+  left: 220px;
+   
+}
+
+.list-item:first-child {
+  border-top: none;
+}
+.list-item:last-child {
+  border-bottom: none;
+}
+
+.list-item-link {
+  color: #444;
+  text-decoration: none;
+}
+
+.item-list-subtext {
+  font-size: 85%;
+  color: grey;
+}
+.item-list-subtext:before {
+  content: ' (';
+}
+.item-list-subtext:after {
+  content: ')';
+}
+
+.list-item--disable {
+  text-align: center;
+  border-bottom: none;
+  animation: shake 0.6s;
+  color: #9da1b1;
+}
+
+.counter {
+  position: absolute;
+  bottom: -15px;
+  right: 10px;
+  z-index: 0;
+  font-size: 3.5em;
+  color: black;
+  transform: translateY(0);
+  opacity: 0;
+  
+}
+
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+
+  
+    <div class="test" data-behaviour="search-on-list">
+        <div class="grid">
+            <section>
+              
+              <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+                <circle class="circle-chart__background" stroke="#efefef" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+                <circle class="circle-chart__circle" stroke="#00acc1" stroke-width="2" stroke-dasharray="30,100" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+                <g class="circle-chart__info">
+                  <text class="circle-chart__percent" x="16.91549431" y="15.5" alignment-baseline="central" text-anchor="middle" font-size="8">10</text>
+                  <text class="circle-chart__subline" x="16.91549431" y="20.5" alignment-baseline="central" text-anchor="middle" font-size="3">offline</text>
+                
+                </g>
+              </svg>
+            </section>
+            </div>
+  
+  <span class="counter" data-search-on-list="counter"></span>
+  <div class="list-wrap">
+  <ul class="list" data-search-on-list="list">
+    <li class="list-item" data-search-on-list="list-item">
+      <a href="" class="list-item-link">ENS500-AC-Middle-Test<br>
+        88:DC:96:5E:B2:82 </span></a>
+    </li>
+    <li class="list-item" data-search-on-list="list-item">
+      <a href="" class="list-item-link">AENS500-AC-Middle-Test<br>
+        88:DC:96:5E:B2:82 </span></span></a>
+    </li>
+    <li class="list-item" data-search-on-list="list-item">
+      <a href="" class="list-item-link">N6000-AC-Middle-<br>
+        88:DC:96:5E:B2:50 </span></span></a>
+    </li>
+    <li class="list-item" data-search-on-list="list-item">
+      <a href="" class="list-item-link">ccc00-AC-Middle-<br>
+        88:DC:96:5E:B2:50 </span></a>
+    </li>
+    <li class="list-item" data-search-on-list="list-item">
+      <a href="" class="list-item-link">ENS500-AC-Middle-Test<br>
+        88:DC:96:5E:B2:82</span></a>
+    </li>
+    <li class="list-item" data-search-on-list="list-item">
+      <a href="" class="list-item-link">ENS500-AC-Middle-Test<br>
+        88:DC:96:5E:B2:82</span></a>
+    </li>
+    <li class="list-item" data-search-on-list="list-item">
+      <a href="" class="list-item-link">ENS500-AC-Middle-Test<br>
+        88:DC:96:5E:B2:82</span></a>
+    </li>
+    <li class="list-item" data-search-on-list="list-item">
+      <a href="" class="list-item-link">ENS500-AC-Middle-Test<br>
+        88:DC:96:5E:B2:82</span></a>
+    </li>
+    <li class="list-item" data-search-on-list="list-item">
+      <a href="" class="list-item-link">ENS500-AC-Middle-Test<br>
+        88:DC:96:5E:B2:82</span></a>
+    </li>
+    <li class="list-item" data-search-on-list="list-item">
+      
+     
+           
+  </ul>
+  </div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+    
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>DemoMenu</title>
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,800" rel="stylesheet">
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'>
+
+      <link rel="stylesheet" href="css/style2.css">
+
+  
+</head>
+
+<body>
+
+  <div class="primary-nav">
+
+	<button href="#" class="hamburger open-panel nav-toggle">
+<span class="screen-reader-text">Menu</span>
+</button>
+
+	<nav role="navigation" class="menu">
+
+		<a href="#" class="logotype">Controller .</a>
+		
+
+		<div class="overflow-container">
+
+			<ul class="menu-dropdown">
+
+				<li><a href="#">Device Management</a><span class="icon"><i class="fa fa-dashboard"></i></span></li>
+
+				<li class="menu-hasdropdown">
+					<a href="#">Monitor</a><span class="icon"><i class="fa fa-gear"></i></span>
+
+					<label title="toggle menu" for="settings">
+        <span class="downarrow"><i class="fa fa-caret-down"></i></span>
+      </label>
+					<input type="checkbox" class="sub-menu-checkbox" id="settings" />
+
+					<ul class="sub-menu-dropdown">
+						<li><a href="">Active Clients</a></li>
+						<li><a href="">Rogue AP Detection</a></li>
+						<li><a href="">System Log</a></li>
+					</ul>
+				</li>
+
+				<li><a href="#">Visualization</a><span class="icon"><i class="fa fa-heart"></i></span></li>
+
+				<li><a href="#">Statistics</a><span class="icon"><i class="fa fa-envelope"></i></span></li>
+
+			</ul>
+
+		</div>
+
+	</nav>
+
+</div>
+
+
+
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
